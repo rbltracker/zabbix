@@ -9,20 +9,18 @@
 
 # RBLTracker Zabbix Plugin
 
-This is a very simple Zabbix plugin, written in bash, to integrate with the RBLTracker public API.
-
-This tool uses the command line `curl` tool to make an HTTPs GET request to a specific Zabbix formatted API URL.
+This is a very simple Zabbix plugin, written in bash, to integrate with the RBLTracker public API. This tool uses the command line `curl` tool to make an HTTPs GET request to a specific Zabbix formatted API URL.
 
 This script returns:
 
 * 0 when the "total_listed" value is 0.
-* > 0 when the "total_listed" value does not equal 0.
+* &gt; 0 when the "total_listed" value does not equal 0.
 * -1 when there is some other error, like an invalid API token.
 
 
 ## Installation
 
-1. Copy `check_rbltracker.sh` into your Zabbix plugins directory; this is most likely `<zabbix dir>/share/zabbix/externalscripts` depending on your plaform.
+1. Copy `check_rbltracker.sh` into your Zabbix plugins directory; this is most likely `<zabbix dir>/share/zabbix/externalscripts` depending on your platform.
 ```
 cp check_rbltracker.sh /usr/share/zabbix/externalscripts/
 ```
